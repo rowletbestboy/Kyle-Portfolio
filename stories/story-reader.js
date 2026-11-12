@@ -93,7 +93,7 @@
 
   var topBar = element("header", "story-topbar");
   var topInner = element("div", "story-topbar-inner");
-  topInner.appendChild(link("../../Kyle_Portf.html#work", "Back to Selected Work", "story-back"));
+  topInner.appendChild(link("../../#work", "Back to Selected Work", "story-back"));
   topInner.appendChild(element("span", "story-topbar-note", "Selected writing by Kyle Apelado"));
   topBar.appendChild(topInner);
 
@@ -166,10 +166,10 @@
   var nextId = storyIds[storyIndex + 1];
   var previousLink = previousId
     ? link("../" + previousId + "/", "Previous story", "story-nav-link")
-    : link("../../Kyle_Portf.html#work", "Back to Selected Work", "story-nav-link");
+    : link("../../#work", "Back to Selected Work", "story-nav-link");
   var nextLink = nextId
     ? link("../" + nextId + "/", "Next story", "story-nav-link")
-    : link("../../Kyle_Portf.html#work", "Back to Selected Work", "story-nav-link");
+    : link("../../#work", "Back to Selected Work", "story-nav-link");
   navigation.append(previousLink, nextLink);
 
   var footer = element("footer", "story-footer");

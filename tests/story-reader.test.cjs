@@ -17,7 +17,7 @@ function loadStories() {
 }
 
 test("the Stories category links to all three dedicated static routes", () => {
-  const html = read("Kyle_Portf.html");
+  const html = read("index.html");
   const storyCards = [...html.matchAll(/<a class="work-item" data-form="Stories" href="([^"]+)"/g)];
 
   assert.deepEqual(
@@ -79,6 +79,7 @@ test("reader includes progress, font controls, navigation, and copying deterrent
   assert.match(reader, /Previous story|Next story/);
   assert.match(reader, /contextmenu/);
   assert.match(reader, /preventDefault/);
+  assert.match(reader, /link\("\.\.\/\.\.\/#work", "Back to Selected Work"/);
   assert.match(reader, /story-watermark/);
   assert.match(reader, /\["a", "c", "p", "s"\]/);
   assert.match(styles, /user-select:\s*none/);
